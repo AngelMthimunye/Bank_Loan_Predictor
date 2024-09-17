@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Loan Predictor</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div id="logo">
+        		    <a id="logo"><img src="static/images/Logo_Bank.jpg" alt="log"></a>
+			</div>
+			
+		</div>
+	</div>
+	<div id="contents">
+		<div>
+			<div class="body" id="contact">
+				<div id="sidebar">
+					<div class="body">
+						<img src="static/images/corner_pic_2.jpg" alt="Img">
+						<div class="contact">
+							
+						</div>
+					</div>
+				</div>
+				<div id="main">
+					<h1>Bank Loan Approval Predictor</h1>
+					<p>
+    					  	Please Enter The Client's Details Below to Determine If They Qualify for a Bank Loan AND CLICK SUBMIT. To export results click DOWNLOAD CSV.
+					</p>
+					<h4>{{ prediction_text }} </h4>
+					<form action="{{ url_for('predict')}}" method="post">
+						<label>Client ID</label>
+						<input type="text" name="client_id" required="required">
+                        </br>
+						<label>Job</label>
+						<!-- <input type="text" value=""> -->
+						<select name="job" required="required">
+                            <option value="" selected="selected"> Please Select Your Job
+                        	<option value="0">Admin
+                        	<option value="1">Blue-Collar
+							<option value="2">Entrepreneur
+							<option value="3">Housemaid
+							<option value="4">Management
+							<option value="5">Retired
+							<option value="6">Self-Employed
+							<option value="7">Services
+							<option value="8">Student
+							<option value="9">Technician
+							<option value="10">Unemployed
+							<option value="11">Unknown
+                        </select>
+                        </br>
+						</br>
+						<label>Age</label>
+						<input type="text" name="age" required="required">
+						<label>Housing</label>
+						<!-- <input type="text" value=""> -->
+						<select name="housing" required="required">
+                            <option value="" selected="selected"> Please Select Your Housing Status
+                        	<option value="0">No
+                        	<option value="1">Yes
+                        </select>
+                        </br>
+                        </br>
+						<label>Pdays</label>
+						<input type="text" name="pdays" required="required">
+						<label>Balance</label>
+						<input type="text" name="balance" required="required">
+						<label>Duration</label>
+						<input type="text" name="duration" required="required">
+						<label>Deposit</label>
+						<!-- <input type="text" value=""> -->
+						<select name="deposit" required="required">
+                            <option value="" selected="selected"> Please Select Your Deposit Status
+                        	<option value="0">No
+                        	<option value="1">Yes
+                        </select>
+						</br>
+						</br>
+						<label>Month</label>
+						<!-- <input type="text" value=""> -->
+						<select name="month" required="required">
+                            <option value="" selected="selected"> Please Select The Month
+                        	<option value="0">April
+                        	<option value="1">August
+							<option value="2">February
+							<option value="3">December
+							<option value="4">January
+							<option value="5">July
+							<option value="6">June
+							<option value="7">March
+							<option value="8">May
+							<option value="9">November
+							<option value="10">October
+							<option value="11">September
+                        </select>
+						</br>
+						</br>
+						<label>Campaign</label>
+						<input type="text" name="campaign" required="required">
+                        </br>
+                        </br>
+						<input type="submit" value="SUBMIT" class="btn1">
+					</form>
+					<!-- Button to download CSV file -->
+					<form action="{{ url_for('download') }}" method="get">
+					    <input type="submit" value="Download CSV" class="btn2">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
