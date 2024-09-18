@@ -34,7 +34,7 @@
 					<h4>{{ prediction_text }} </h4>
 					<form action="{{ url_for('predict')}}" method="post">
 						<label>Client ID</label>
-						<input type="text" name="client_id" required="required">
+						<input type="text" name="client_id" required="required" pattern="\d+" title="Please enter a valid number.">
                         </br>
 						<label>Job</label>
 						<!-- <input type="text" value=""> -->
@@ -56,7 +56,7 @@
                         </br>
 						</br>
 						<label>Age</label>
-						<input type="text" name="age" required="required">
+						<input type="text" name="age" required="required" pattern="\d+" title="Please enter a valid number.">
 						<label>Housing</label>
 						<!-- <input type="text" value=""> -->
 						<select name="housing" required="required">
@@ -67,11 +67,11 @@
                         </br>
                         </br>
 						<label>Pdays</label>
-						<input type="text" name="pdays" required="required">
+						<input type="text" name="pdays" required="required" pattern="\d+" title="Please enter a valid number.">
 						<label>Balance</label>
-						<input type="text" name="balance" required="required">
+						<input type="text" name="balance" required="required" pattern="\d+" title="Please enter a valid number.">
 						<label>Duration</label>
-						<input type="text" name="duration" required="required">
+						<input type="text" name="duration" required="required" pattern="\d+" title="Please enter a valid number.">
 						<label>Deposit</label>
 						<!-- <input type="text" value=""> -->
 						<select name="deposit" required="required">
@@ -101,7 +101,7 @@
 						</br>
 						</br>
 						<label>Campaign</label>
-						<input type="text" name="campaign" required="required">
+						<input type="text" name="campaign" required="required" pattern="\d+" title="Please enter a valid number.">
                         </br>
                         </br>
 						<input type="submit" value="SUBMIT" class="btn1">
