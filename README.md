@@ -1,5 +1,7 @@
 # Bank_Loan_Predictor
 
+Link to Deployed App: https://web-production-18e5.up.railway.app/
+
 This is a python application that allows you to predict if clients qualify for a bank loan or not. The user enters the details of a client on the application and that information is used to determine if the client's loan application is approved. After entering clients details and getting the predictions, the results can be exported to a csv file on the application.
 
 The application uses Flask to create the graphical user interface and utilizes classification models to predict the loan approval status.
@@ -29,3 +31,5 @@ Run the following command in your terminal:
 ```
 python app.py
 ```
+
+
